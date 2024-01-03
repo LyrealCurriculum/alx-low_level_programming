@@ -1,9 +1,8 @@
 #include "main.h"
 
 /**
- * _puts - prints a string
- * @str: string
- * Return: length
+ * _puts - prints a string with a new line to stdout
+ * @str: string to be printed
  */
 void _puts(char *str)
 {
@@ -11,5 +10,5 @@ void _puts(char *str)
 	{
 		putchar(*str++);
 	}
-	_putchar ('\n')
+	_putchar('\n')
 }
