@@ -3,11 +3,11 @@
 #include <time.h>
 
 /**
- * keygen -generates random passwords for 101-crackme
+ * main -generates random passwords for 101-crackme
  * Return: zero
  */
 
-int keygen(void)
+int main(void)
 {
 	int sum;
 	char c;
