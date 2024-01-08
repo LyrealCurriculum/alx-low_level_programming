@@ -10,6 +10,7 @@
 char *_memcpy(char *dest, char *src, unsigned int n)
 {
 	unsigned int itr;
+	unsigned int n;
 
 	for (itr = 0; itr < n; itr++)
 	{
