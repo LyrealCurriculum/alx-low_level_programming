@@ -16,7 +16,7 @@ int is_prime_a(int a, int b)
 	{
 		return (1);
 	}
-	return (prime_a(a, b + 1));
+	return (is_prime_a(a, b + 1));
 }
 
 /**
@@ -26,5 +26,5 @@ int is_prime_a(int a, int b)
  */
 int is_prime_number(int n)
 {
-	return (prime_a(n, 2));
+	return (is_prime_a(n, 2));
 }
