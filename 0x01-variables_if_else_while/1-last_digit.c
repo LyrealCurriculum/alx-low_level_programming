@@ -3,9 +3,10 @@
 #include <stdio.h>
 
 /**
- * main - prints the last digit of the random
- * number stored in the variable n
- * Return: Always 0 (Success)
+ * main - assigns a random number to n everytime it is executed,
+ * and prints the last digit of the number.
+ *
+ * Return: 0
  */
 int main(void)
 {

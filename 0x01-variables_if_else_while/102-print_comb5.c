@@ -1,32 +1,38 @@
 #include <stdio.h>
 
 /**
- * main - prints all possible combinations of two two-digit numbers
- * Return: Always 0 (Success)
+ * main - prints all possible different combinations of two differing two-digit
+ * base 10 numbers, separated by a space and in ascending order.
+ *
+ * Return: 0
  */
 int main(void)
 {
-	int i, j;
+	int n = 0;
 
-	for (i = 0; i < 100; i++)
+	while (n <= 98)
 	{
-		for (j = 0; j < 100; j++)
+		int r = 1;
+
+		while (r <= 99)
 		{
-			if (i < j)
+			if (n < r)
 			{
-				putchar((i / 10) + 48);
-				putchar((i % 10) + 48);
+				putchar(n / 10 + 48);
+				putchar(n % 10 + 48);
 				putchar(' ');
-				putchar((j / 10) + 48);
-				putchar((j % 10) + 48);
-				if (i != 98 || j != 99)
+				putchar(r / 10 + 48);
+				putchar(r % 10 + 48);
+				if (n != 98 || r != 99)
 				{
 					putchar(',');
 					putchar(' ');
 				}
-			}
 
+			}
+			r++;
 		}
+		n++;
 	}
 	putchar('\n');
 	return (0);

@@ -1,28 +1,28 @@
 #include <stdio.h>
 
 /**
- * main - prints all possible different combinations of two digits
- * Return: ALways 0 (Success)
+ * main - prints all possible different combinations of two differing base 10
+ * digits, in ascending order of only the smallest combination of them.
+ *
+ * Return: 0
  */
 int main(void)
 {
-	int n, m;
+	int n = 1;
 
-	for (n = 48; n <= 56; n++)
+	while (n <= 89)
 	{
-		for (m = 49; m <= 57; m++)
+		if ((n / 10) != (n % 10) && (n / 10) < (n % 10))
 		{
-			if (m > n)
+			putchar(n / 10 + 48);
+			putchar(n % 10 + 48);
+			if (n != 89)
 			{
-				putchar(n);
-				putchar(m);
-				if (n != 56 || m != 57)
-				{
-					putchar(',');
-					putchar(' ');
-				}
+				putchar(',');
+				putchar(' ');
 			}
 		}
+		n++;
 	}
 	putchar('\n');
 	return (0);

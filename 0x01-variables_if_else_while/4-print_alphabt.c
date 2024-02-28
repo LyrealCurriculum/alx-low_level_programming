@@ -1,21 +1,21 @@
 #include <stdio.h>
 
 /**
- * main - prints the alphabet in lowercase,
- * followed by a new line, except q and e
- * Return: Aways 0 (Sucess)
+ * main - prints the alphabet in lowercase, except q and e,
+ * followed by a new line.
+ *
+ * Return: 0
  */
 int main(void)
 {
-	char ch = 'a';
+	char abc;
 
-	while (ch <= 'z')
+	for (abc = 'a'; abc <= 'z'; abc++)
 	{
-		if (ch != 'e' && ch != 'q')
+		if (abc != 'e' && abc != 'q')
 		{
-			putchar(ch);
+			putchar(abc);
 		}
-		ch++;
 	}
 	putchar('\n');
 	return (0);

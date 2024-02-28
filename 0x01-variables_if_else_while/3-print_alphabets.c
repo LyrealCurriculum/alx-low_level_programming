@@ -2,17 +2,18 @@
 
 /**
  * main - prints the alphabet in lowercase, and then in uppercase,
- * followed by a new line
- * Return: Always 0 (Success)
+ * followed by a new line.
+ *
+ * Return: 0
  */
 int main(void)
 {
-	int ch;
+	int abc;
 
-	for (ch = 'a'; ch <= 'z'; ch++)
-		putchar(ch);
-	for (ch = 'A'; ch <= 'Z'; ch++)
-		putchar(ch);
+	for (abc = 'a'; abc <= 'z'; abc++)
+		putchar(abc);
+	for (abc = 'A'; abc <= 'Z'; abc++)
+		putchar(abc);
 	putchar('\n');
 	return (0);
 }

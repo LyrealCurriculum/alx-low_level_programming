@@ -1,32 +1,32 @@
 #include <stdio.h>
 
 /**
- * main - prints all possible different combinations of three digits
- * Return: Always 0 (Success)
+ * main - prints all possible different combinations of three differing base 10
+ * digits, in ascending order of only the smallest combination of them.
+ *
+ * Return: 0
  */
 int main(void)
 {
-	int n, m, l;
+	int n = 12;
 
-	for (n = 48; n < 58; n++)
+	while (n <= 789)
 	{
-		for (m = 49; m < 58; m++)
+		if ((((n / 100) != (n / 10) % 10) && (n / 100) != (n % 10)
+					&& (n / 10) % 10 != (n % 10)) &&
+				(((n / 100) < (n / 10) % 10) && (n / 100) < (n % 10)
+				 && (n / 10) % 10 < (n % 10)))
 		{
-			for (l = 50; l < 58; l++)
+			putchar(n / 100 + 48);
+			putchar((n / 10) % 10 + 48);
+			putchar(n % 10 + 48);
+			if (n != 789)
 			{
-				if (l > m && m > n)
-				{
-					putchar(n);
-					putchar(m);
-					putchar(l);
-					if (n != 55 || m != 56)
-					{
-						putchar(',');
-						putchar(' ');
-					}
-				}
+				putchar(',');
+				putchar(' ');
 			}
 		}
+		n++;
 	}
 	putchar('\n');
 	return (0);
