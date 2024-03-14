@@ -6,27 +6,29 @@
  */
 void print_number(int n)
 {
+	unsigned int m;
+
 	if (n < 0)
-	{	n = -n;
+	{	m = -n;
 		_putchar('-');
 	}
-	if (n > 999999999)
-		_putchar(n / 1000000000 + '0');
-	if (n > 99999999)
-		_putchar((n / 100000000) % 10 + '0');
-	if (n > 9999999)
-		_putchar((n / 10000000) % 10 + '0');
-	if (n > 999999)
-		_putchar((n / 1000000) % 10 + '0');
-	if (n > 99999)
-		_putchar((n / 100000) % 10 + '0');
-	if (n > 9999)
-		_putchar((n / 10000) % 10 + '0');
-	if (n > 999)
-		_putchar((n / 1000) % 10 + '0');
-	if (n > 99)
-		_putchar((n / 100) % 10 + '0');
-	if (n > 9)
-		_putchar((n / 10) % 10 + '0');
-	_putchar(n % 10 + '0');
+	if (m > 999999999)
+		_putchar(m / 1000000000 + '0');
+	if (m > 99999999)
+		_putchar((m / 100000000) % 10 + '0');
+	if (m > 9999999)
+		_putchar((m / 10000000) % 10 + '0');
+	if (m > 999999)
+		_putchar((m / 1000000) % 10 + '0');
+	if (m > 99999)
+		_putchar((m / 100000) % 10 + '0');
+	if (m > 9999)
+		_putchar((m / 10000) % 10 + '0');
+	if (m > 999)
+		_putchar((m / 1000) % 10 + '0');
+	if (m > 99)
+		_putchar((m / 100) % 10 + '0');
+	if (m > 9)
+		_putchar((m / 10) % 10 + '0');
+	_putchar(m % 10 + '0');
 }
